@@ -343,8 +343,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 735980218}
-  - component: {fileID: 735980220}
   - component: {fileID: 735980219}
+  - component: {fileID: 735980221}
   m_Layer: 0
   m_Name: Camera Rig
   m_TagString: Untagged
@@ -385,26 +385,22 @@ MonoBehaviour:
   LeftEye: {fileID: 963194225}
   RightEye: {fileID: 367346456}
   IPD: 64.1
---- !u!95 &735980220
-Animator:
-  serializedVersion: 4
+--- !u!114 &735980221
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 735980217}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f84bae8f479f3c845b83e764690e8561, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e26baa3a57ac33344833cd411166d001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraSpeed: 0.05
+  mouseSensitivity: 1
+  arrowsSensitivity: 0.5
+  maxYAngle: 85
 --- !u!1 &784532246 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 599656d3b2542704aafcac90141e37c0, type: 3}

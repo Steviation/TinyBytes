@@ -6,9 +6,8 @@ public class HueShift : MonoBehaviour
 {
 	public float HueSpeed = 0.1f;
 	private Renderer rend;
-	//private Material mat;
 	private float h, s, v;
-	//private float offset;
+	private float offset;
 
 	// Start is called before the first frame update
 	void Start()
@@ -24,10 +23,9 @@ public class HueShift : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		float r, g, b;
-		float offset = Time.time * HueSpeed;
+		offset += Time.deltaTime * HueSpeed;
 		// Convert HSV to RGB
-		Color col = Color.HSVToRGB((h + offset) % 1f, s, v);
+		Color col = Color.HSVToRGB(Mathf.Repeat(h + offset,1), s, v);
 		// Set material color
 		rend.material.color = col;
 	}
